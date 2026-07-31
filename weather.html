@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - TripEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+
+        <h2>TripEase</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="expenses.html">Expenses</a></li>
+            <li><a href="weather.html">Weather</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+
+<section class="weather">
+
+    <div class="weather-header">
+
+        <div class="weather-text">
+
+            <h1>Check Your Destination Weather</h1>
+
+            <p>
+                Stay prepared by checking the latest weather conditions before your trip.
+            </p>
+
+            <div class="weather-box">
+
+                <input
+                    type="text"
+                    id="weather-city"
+                    placeholder="Enter Destination"
+                >
+
+                <button id="check-weather">
+                    Check Weather
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="weather-image">
+
+            <img src="assets/images/weather.svg" alt="Weather">
+
+        </div>
+
+    </div>
+
+    <div class="weather-result">
+
+        <h2>Weather Details</h2>
+
+        <div class="weather-card">
+
+            <h3 id="city-name">--</h3>
+
+            <p>🌡 Temperature: <span id="temperature">--</span></p>
+
+            <p>🌤 Condition: <span id="condition">--</span></p>
+
+            <p>💧 Humidity: <span id="humidity">--</span></p>
+
+            <p>🌬 Wind Speed: <span id="wind">--</span></p>
+
+            <p>🧳 Suggestion: <span id="suggestion">--</span></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

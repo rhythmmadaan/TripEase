@@ -1,3 +1,71 @@
+const API_KEY = "2e10bf41b6cc438f9ba195302263107";
+async function getWeather(city){
+
+    try{
+
+        const url =
+        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
+
+        let response = await fetch(url);
+
+        let data = await response.json();
+
+
+        if(data.error){
+
+            alert("City not found!");
+
+            return;
+
+        }
+
+
+        document.querySelector("#city-name").innerText =
+        data.location.name + ", " + data.location.country;
+
+        document.querySelector("#temperature").innerText =
+        data.current.temp_c + "°C";
+
+        document.querySelector("#condition").innerText =
+        data.current.condition.text;
+
+        document.querySelector("#humidity").innerText =
+        data.current.humidity + "%";
+
+        document.querySelector("#wind").innerText =
+        data.current.wind_kph + " km/h";
+
+
+        let suggestion = "";
+
+        if(data.current.temp_c < 10){
+
+            suggestion = "Carry warm clothes.";
+
+        }
+        else if(data.current.temp_c < 25){
+
+            suggestion = "Perfect weather for sightseeing.";
+
+        }
+        else{
+
+            suggestion = "Stay hydrated and carry sunscreen.";
+
+        }
+
+        document.querySelector("#suggestion").innerText = suggestion;
+
+    }
+
+    catch(error){
+
+        alert("Something went wrong. Please try again.");
+
+    }
+
+}
+
 let button = document.querySelector("#generate-btn");
 
 if(button){
@@ -208,5 +276,45 @@ if(expenseButton){
 
     });
 
+
+}
+
+// Weather Button
+
+let weatherButton = document.querySelector("#check-weather");
+
+if(weatherButton){
+
+    weatherButton.addEventListener("click", function(){
+
+        let city = document.querySelector("#weather-city").value;
+
+        if(city === ""){
+
+            alert("Please enter a city.");
+
+            return;
+
+        }
+
+        getWeather(city);
+
+    });
+
+}
+
+let cityInput = document.querySelector("#weather-city");
+
+if(cityInput){
+
+    cityInput.addEventListener("keypress", function(e){
+
+        if(e.key === "Enter"){
+
+            weatherButton.click();
+
+        }
+
+    });
 
 }
