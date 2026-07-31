@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - TripEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>TripEase</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="expenses.html">Expenses</a></li>
+            <li><a href="#">Weather</a></li>
+        </ul>
+
+        
+    </nav>
+</header>
+
+
+<main>
+
+<section class="expenses">
+
+<div class="expense-header">
+
+
+    <div class="expense-text">
+
+        <h1>Track Your Travel Expenses</h1>
+
+        <p>
+            Manage your spending and stay within your travel budget.
+        </p>
+
+
+        <div class="expense-box">
+
+            <input type="number" id="travel-budget" placeholder="Travel Budget">
+
+            <input type="text" placeholder="Expense name">
+
+
+            <input type="number" placeholder="Amount">
+
+
+            <select>
+                <option>Food</option>
+                <option>Hotel</option>
+                <option>Transport</option>
+                <option>Shopping</option>
+            </select>
+
+
+            <button id="add-expense">
+                Add Expense
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="expense-image">
+
+        <img src="assets/images/expense.svg" alt="Expense Tracking">
+
+    </div>
+
+
+</div>
+
+
+    <div class="expense-result">
+
+
+    <div class="expense-summary">
+
+        <div class="summary-card">
+
+            <h3>Total Budget</h3>
+
+            <p>
+            ₹<span id="total-budget">0</span>
+            </p>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <h3>Total Spent</h3>
+            <p>
+                ₹<span id="total-expense">0</span>
+            </p>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <h3>Remaining</h3>
+
+           <p>
+            ₹<span id="remaining-budget">0</span>       
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <h2>Your Expenses</h2>
+
+
+    <div id="expense-list"></div>
+
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
