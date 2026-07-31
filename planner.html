@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner - TripEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>TripEase</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="#">Expenses</a></li>
+            <li><a href="#">Weather</a></li>
+        </ul>
+
+        <button>Get Started</button>
+    </nav>
+</header>
+
+
+<main>
+
+    <section class="planner">
+
+        <h1>Plan Your Perfect Trip</h1>
+
+        <p>Create a personalized travel plan according to your preferences.</p>
+
+        <div class="planner-box">
+
+            <input type="text" placeholder="Enter destination">
+
+            <input type="number" placeholder="Number of days">
+
+            <input type="number" placeholder="Your budget">
+
+            <select>
+                <option>Adventure</option>
+                <option>Relaxation</option>
+                <option>Luxury</option>
+                <option>Backpacking</option>
+            </select>
+
+            <button id="generate-btn">Generate Trip</button>
+
+        </div>
+
+        <div class="trip-result">
+
+         <h2>Your Trip Plan</h2>
+
+         <div id="itinerary"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
